@@ -1,0 +1,7 @@
+{
+  "pin": 17,
+  "reportTimeSeconds": 60,
+  "serverEndpoint": "http://localhost:8081",
+  "sensorId": "e138561a-1397-4372-9a44-f9bcd935cef5",
+  "secret": "test_secret"
+}

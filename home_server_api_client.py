@@ -10,7 +10,8 @@ class HomeServerApiClient:
 
     def authenticate(self):
         self._token = None
-        r = requests.post(self._endpoint + "/auth/sensor", {"sensorId": self._sensor_id, "secret": self._secret})
+        r = requests.post(self._endpoint + "/auth/sensor", {"sensorId": self._sensor_id, "secret": self._secret},
+                          timeout=30)
         if r.status_code == 200:
             token = r.json().get("token", None)
 
@@ -39,4 +40,3 @@ class HomeServerApiClient:
             return False
         else:
             return False
-
